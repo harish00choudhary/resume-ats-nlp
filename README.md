@@ -45,27 +45,22 @@ project_resumeATS/
 ├── training_data.csv       # Custom training dataset
 ├── .gitignore
 └── README.md
+
 📊 How It Works
 
-Resume Upload
+1.Resume Upload
+  - User uploads a resume in PDF format.
+  - pdfplumber extracts raw text.
 
-User uploads a resume in PDF format.
+2. Job Description Input
+  - User pastes the job description.
 
-pdfplumber extracts raw text.
+3. Text Embedding
+  - Resume and JD are converted into vector embeddings using a Sentence Transformer.
 
-Job Description Input
-
-User pastes the job description.
-
-Text Embedding
-
-Resume and JD are converted into vector embeddings using a Sentence Transformer.
-
-Similarity Calculation
-
-Cosine similarity is computed between embeddings.
-
-Output is shown as a percentage match score.
+4. Similarity Calculation
+  - Cosine similarity is computed between embeddings.
+  - Output is shown as a percentage match score.
 
 🧪 Model Training (Important for Interviews)
 Dataset
@@ -126,8 +121,7 @@ streamlit run app.py
 📈 Output Explanation
 
 Match score is shown as 0–1 range
-
-Example: 0.88 = 88% match
+  - Example: 0.88 = 88% match
 
 This is cosine similarity, not a probability
 
