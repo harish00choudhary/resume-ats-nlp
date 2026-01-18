@@ -1,21 +1,73 @@
-# Virtual environment
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ===============================
+# Virtual Environment
+# ===============================
 .venv/
 venv/
+env/
 
-# Python cache
-__pycache__/
-*.pyc
-
-# OS files
+# ===============================
+# OS / Editor
+# ===============================
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/
 
-# Streamlit cache
-.streamlit/
+# ===============================
+# Streamlit
+# ===============================
+.streamlit/secrets.toml
 
-# Model artifacts (optional – adjust if needed)
-resume_ats_model/
-*.pt
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Model Artifacts (IMPORTANT)
+# ===============================
+# Large ML model files (do NOT push to GitHub)
+model.safetensors
 *.bin
+*.pt
+*.ckpt
 
-# Data (optional)
+# Sentence Transformer model folders
+src/model/resume_ats_model/
+src/model/**/1_Pooling/
+src/model/**/2_Normalize/
+
+# ===============================
+# Training Data
+# ===============================
 training_data.csv
+
+# ===============================
+# Cache / Temp
+# ===============================
+.cache/
+# Models (DO NOT COMMIT)
+src/model/
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+
+# HuggingFace artifacts
+sentence_transformer_*
+tokenizer.json
+vocab.txt
+config.json
+modules.json
